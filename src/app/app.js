@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('inspinia', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap'])
+angular.module('inspinia', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap' ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state('index', {
             abstract: true,
             url: "/index",
-            templateUrl: "components/common/content.html",
+            templateUrl: "components/common/content.html"
         })
         .state('index.main', {
             url: "/main",
@@ -18,7 +18,7 @@ angular.module('inspinia', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
             url: "/minor",
             templateUrl: "app/minor/minor.html",
             data: { pageTitle: 'Example view' }
-        })
+        });
 
     $urlRouterProvider.otherwise('/index/main');
   })
