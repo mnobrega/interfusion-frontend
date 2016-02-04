@@ -1,7 +1,10 @@
 {
   "name": "inspinia",
   "version": "2.3.0",
-  "dependencies": {},
+  "dependencies": {
+    "connect": "^3.4.1",
+    "serve-static": "^1.10.2"
+  },
   "devDependencies": {
     "gulp": "~3.8.10",
     "gulp-autoprefixer": "~2.0.0",
