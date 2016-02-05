@@ -1,5 +1,15 @@
 'use strict';
 
+
+function pausecomp(millis)
+{
+  var date = new Date();
+  var curDate = null;
+  do { curDate = new Date(); }
+  while(curDate-date < millis);
+}
+
+
 var gulp = require('gulp');
 
 var paths = gulp.paths;
