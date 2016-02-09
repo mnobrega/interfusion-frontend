@@ -4,12 +4,12 @@ var gulp = require('gulp');
 
 var paths = gulp.paths;
 
-gulp.task('watch', ['inject'], function () {
+gulp.task('watch', ['inject','translations'], function () {
   gulp.watch([
     paths.src + '/*.html',
     paths.src + '/{app,components}/**/*.less',
     paths.src + '/{app,components}/**/*.js',
     paths.src + '/po/*.po',
     'bower.json'
-  ], ['inject']);
+  ], ['inject','translations']);
 });
