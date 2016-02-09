@@ -1,15 +1,5 @@
 'use strict';
 
-
-function pausecomp(millis)
-{
-  var date = new Date();
-  var curDate = null;
-  do { curDate = new Date(); }
-  while(curDate-date < millis);
-}
-
-
 var gulp = require('gulp');
 
 var paths = gulp.paths;
@@ -46,6 +36,9 @@ gulp.task('html', ['inject', 'partials'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
   var assets;
+
+  gulp.src(paths.tmp+'/serve/translations/*.json')
+      .pipe(gulp.dest(paths.dist+'/translations/'));
 
   return gulp.src(paths.tmp + '/serve/*.html')
     .pipe($.inject(partialsInjectFile, partialsInjectOptions))
@@ -106,4 +99,4 @@ gulp.task('clean', function (done) {
 });
 
 
-gulp.task('build', ['html', 'images', 'fonts', 'fontawesome','bootstrapfonts','misc']);
+gulp.task('build', ['html', 'images', 'fonts', 'fontawesome','bootstrapfonts','misc','translations']);

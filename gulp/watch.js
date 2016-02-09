@@ -9,6 +9,7 @@ gulp.task('watch', ['inject'], function () {
     paths.src + '/*.html',
     paths.src + '/{app,components}/**/*.less',
     paths.src + '/{app,components}/**/*.js',
+    paths.src + '/po/*.po',
     'bower.json'
   ], ['inject']);
 });
