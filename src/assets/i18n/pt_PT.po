@@ -14,4 +14,4 @@ msgstr ""
 
 #: minor\minor.html:8
 msgid "Configure in app.js as index.minor state."
-msgstr "Configuração no app.js como estado index.minor.1"
+msgstr "Configuração no app.js como estado index.minor."

@@ -3,10 +3,10 @@
 angular.module('inspinia')
   .controller('MainCtrl', function ($scope, gettextCatalog) {
 
-      var lang = 'pt';
+      var lang = 'pt_PT';
       gettextCatalog.debug = true;
       gettextCatalog.setCurrentLanguage(lang);
-      gettextCatalog.loadRemote("/translations/"+lang+".json");
+      gettextCatalog.loadRemote("/assets/i18n/"+lang+".json");
 
       this.userName = 'Example user';
       this.helloText = 'Welcome in INSPINIA Gulp SeedProject';
